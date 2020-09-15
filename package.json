@@ -1,20 +1,32 @@
 {
-  "name": "navigate-rover",
+  "name": "rover-navigator",
   "version": "1.0.0",
-  "description": "An introductory AI game web-app",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frankenstein32/navigate-rover.git"
+    "url": "git+https://github.com/shubh-side/Navigate-Rover.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/frankenstein32/navigate-rover/issues"
+    "url": "https://github.com/shubh-side/Navigate-Rover/issues"
   },
-  "homepage": "https://github.com/frankenstein32/navigate-rover#readme"
+  "homepage": "https://github.com/shubh-side/Navigate-Rover#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+    
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "heroku-postbuild": "npm run build"
+  }
 }
