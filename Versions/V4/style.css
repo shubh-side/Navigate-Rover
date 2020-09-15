@@ -1,0 +1,374 @@
+#grid {
+    margin-bottom: 20px;
+    padding: 0px;
+    transition: 2s;
+  }
+  
+  body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url('https://i.imgur.com/m5rLvSQ.png');
+  }
+  /* The sidepanel menu */
+  .sidepanel {
+    height: 900px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    /* background-color: #111; Black */
+    background-image: url('https://i.imgur.com/DxumkMe.png');
+    background-position: top right;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    border-color: darkslategrey;
+  }
+  
+  /* The sidepanel links */
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFF;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidepanel a:hover {
+    color: grey;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: rgb(0, 16, 4);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+  
+  .openbtn:hover {
+    color: gray;
+  }
+  
+  /* Side panel elements padding */
+  .space{
+
+    margin: 50px;
+    text-align: center;
+  }
+
+  /* Flip Card Css */
+  /* The flip card container - set the width and height to whatever you want. */
+  /* I have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+  width: 70%;
+  height: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-left: 250px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  border: 6px solid;
+  transform: rotateY(180deg);
+  background-image: url('https://i.imgur.com/DxumkMe.png');
+  cursor: pointer;
+}
+
+
+/* List Group Css */
+ul {
+  margin-top: 10px;
+  list-style-type: none; /* Remove bullets */
+  text-align: left;
+}
+
+ul li {
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+/* Flash Card Css*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/* Start Button Css */
+.startdiv{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 778px;
+  width: 100%; 
+  text-align: right;
+  border: none;
+}
+
+.startbutton{
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: rgb(0, 16, 4);
+  color: white;
+}
+
+.startbutton:hover{
+  color: gray;
+}
+
+HTML Less JSResult
+EDIT ON
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600,700,900);
+@blue: #8599b0;
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+a.reset {
+  background: #787f81;
+  border-radius: 24px;
+  bottom: 20px;
+  color: #fff;
+  display: block;
+  left: 50%;
+  margin-left: -70px;
+  padding: 8px 0;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s ease-in;
+  width: 140px;
+
+  &:hover {
+    background: darken(#787f81, 15);
+    text-decoration: none;
+  }
+}
+
+div.holder {
+  position: absolute;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  top: 50%;
+}
+
+ul.titles {
+  margin: 0;
+  padding: 0;
+  li {
+    height: 100px;
+    font-size: 48px;
+    line-height: 2em;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    text-transform: uppercase;
+    &.title1 {
+      transform: translate3d(0,-125%,0);
+    }
+    &.title2 {
+      transform: translate3d(0,0,0);
+    }
+    &.title3 {
+      transform: translate3d(0,125%,0);
+    }
+    &.title-animate.title1 {
+      animation: title-animate1 1s 1 1.2s forwards;
+    }
+    &.title-animate.title2 {
+      animation: title-animate2 1.25s 1 1.4s forwards;
+    }
+    &.title-animate.title3 {
+      animation: title-animate3 1.5s 1 1.8s forwards;
+    }
+  }
+}
+
+div.dot {
+  background: @blue;
+  border-radius: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  width: 100px;
+
+  &.top {
+    z-index: 15;
+  }
+  &.mid {
+    z-index: 10;
+  }
+  &.btm {
+    z-index: 5;
+  }
+  &.dot1 {
+    animation: pickup1 1.5s 1 forwards;
+  }
+  &.dot2 {
+    animation: pickup2 1.5s 1 forwards;
+  }
+  &.dot3 {
+    animation: pickup3 1.5s 1 forwards;
+  }
+}
+
+// animation
+
+@keyframes title-animate1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-125%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-75px,-125%,0);
+  }
+}
+@keyframes title-animate2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-75px,0,0);
+  }
+}
+@keyframes title-animate3 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,125%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-75px,125%,0);
+  }
+}
+
+
+@keyframes pickup1 {
+  0% {
+    background: @blue;
+    box-shadow: 0 0 0 rgba(0,0,0,.3);
+    transform: scale3d(1,1,1) translate3d(0,0,0);
+  }
+  50% {
+    background: lighten(@blue,5);
+    box-shadow: 0 100px 30px rgba(0,0,0,0.1);
+    transform: scale3d(1.3,0.9,1) translate3d(0,-150%,0);
+  }
+  100% {
+    background: @blue;
+    box-shadow: none;
+    transform: scale3d(1,1,1) translate3d(-200%,-125%,0);
+  }
+}
+
+@keyframes pickup2 {
+  0% {
+    background: @blue;
+    box-shadow: 0 0 0 rgba(0,0,0,.4);
+    transform: scale3d(1,1,1) translate3d(0,0,0);
+  }
+  50% {
+    background: lighten(@blue,3);
+    box-shadow: 0 80px 20px rgba(0,0,0,0.15);
+    transform: scale3d(1.15,0.9,1) translate3d(0,-100%,0);
+  }
+  100% {
+    background: @blue;
+    box-shadow: none;
+    transform: scale3d(1,1,1) translate3d(-200%,0,0);
+  }
+}
+
+@keyframes pickup3 {
+  0% {
+    background: @blue;
+    box-shadow: 0 0 0 rgba(0,0,0,.5);
+    transform: scale3d(1,1,1) translate3d(0,0,0);
+  }
+  50% {
+    background: lighten(@blue,1);
+    box-shadow: 0 60px 10px rgba(0,0,0,0.3);
+    transform: scale3d(1.075,0.9,1) translate3d(0,-50%,0);
+  }
+  100% {
+    background: @blue;
+    box-shadow: none;
+    transform: scale3d(1,1,1) translate3d(-200%,125%,0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+View Compiled
+Resources1×0.5×0.25×Rerun
